@@ -68,11 +68,13 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
+                    
                     @if (Auth::user()->hasAnyRole('staff'))
                         <a href="{{ route('staffdashboard') }}">Dashboard</a>
                     @else   
                         <a href="{{ route('admin.dashboard') }}">Dashboard</a>
                     @endif
+
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
