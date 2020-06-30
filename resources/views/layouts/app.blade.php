@@ -75,7 +75,7 @@
         <main class="py-4">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 mb-5">
                         @if(Auth::check())
                             @if(Auth::user()->hasAnyRole('staff'))
                                 <div class="card card-body">
@@ -102,7 +102,7 @@
                                     <a href="{{route('admin.create.staff')}}" style="text-decoration: none">Create Staff</a>
                                </li>
                                <li class="list-group-item">
-                                   <a href="{{route('admin.departments')}}" style="text-decoration: none">All Departments</a>
+                                   <a href="{{route('admin.dashboard')}}" style="text-decoration: none">All Departments</a>
                                </li>
                                <li class="list-group-item">
                                     <a href="{{route('admin.staffs')}}" style="text-decoration: none">All Staffs</a>
